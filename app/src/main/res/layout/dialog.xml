@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:padding="10dip"
+	>
+	<ProgressBar 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+	    />
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:padding="15dip"	    
+		android:orientation="vertical"
+		>
+		<TextView 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:text="다운로드 중입니다"
+		    android:textSize="20dip"
+		    />
+		<TextView 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="20dip"
+		    android:text="다운로드 경로"
+		    />
+		<TextView 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/txt_path"
+		    android:text="path"
+		    />
+		<TextView 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="20dip"
+		    android:text="파일명"
+		    />
+		<TextView 
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:id="@+id/txt_name"
+		    android:text="filename"
+		    />
+	</LinearLayout>
+</LinearLayout>

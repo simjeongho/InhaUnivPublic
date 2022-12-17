@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="#FFF"
+	>
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:id="@+id/layout_linear"
+		android:orientation="vertical"
+
+		android:layout_alignParentTop="true"
+		>
+	  	<WebView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/webview"
+			android:layout_weight="1"
+			
+	  	    />
+	  	<LinearLayout 
+			android:layout_width="fill_parent"
+ 			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:background="#777"
+			android:layout_weight="0"
+			android:padding="5dip"
+	  	    >
+	  	    <ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/btn_back"
+				android:src="@drawable/web_back_disable"
+				android:layout_weight="1"
+	  	        />
+	  	    <ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/btn_next"
+				android:src="@drawable/web_next_disable"
+				android:layout_weight="1"
+	  	        />
+	  	    <ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/btn_refresh"
+				android:src="@drawable/web_refresh"
+				android:layout_weight="1"
+	  	        />
+	  	    <ImageView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/btn_home"
+				android:src="@drawable/web_home"
+				android:layout_weight="1"
+	  	        />
+	  	</LinearLayout>
+	</LinearLayout>
+    <ProgressBar
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:id="@+id/progress"
+    	android:layout_centerInParent="true"
+    	/>
+</RelativeLayout>

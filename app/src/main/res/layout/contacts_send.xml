@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="#FFF" >
+	
+    <ImageView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:src="@drawable/main_title_blank"
+		android:layout_alignParentTop="true"
+		android:adjustViewBounds="true"
+		android:scaleType="fitXY"/> 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        
+        android:layout_alignParentTop="true"
+         >
+
+		<ImageView
+		    android:id="@+id/img_title"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_alignParentTop="true"
+		    android:onClick="onClick"
+		    android:adjustViewBounds="true"
+		    android:src="@drawable/main_title" />
+
+        <WebView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/webview"
+			/>  
+        
+        <ToggleButton
+            android:id="@+id/toggleNFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="ToggleButton"
+            android:textOff="NFC OFF"
+            android:textOn="NFC On" />
+
+        <TextView
+            android:id="@+id/dataNFC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="selectData" />
+        
+        <CheckBox
+            android:id="@+id/checkBox1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox1"
+            android:layout_marginLeft="10dp"
+            android:checked="true" /> 
+        
+        <CheckBox
+            android:id="@+id/checkBox2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox2"
+            android:layout_marginLeft="10dp"
+            android:checked="true" />
+
+        <CheckBox
+            android:id="@+id/checkBox3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox3"
+            android:layout_marginLeft="10dp"
+            android:checked="true" />
+
+        <CheckBox
+            android:id="@+id/checkBox4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox4"
+            android:layout_marginLeft="10dp"
+            android:checked="true" />
+        
+        <CheckBox
+            android:id="@+id/checkBox5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox5"
+            android:layout_marginLeft="10dp"
+            android:checked="true" />    
+        
+        <CheckBox
+            android:id="@+id/checkBox6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CheckBox6"
+            android:layout_marginLeft="10dp"
+            android:checked="true" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/confirmNFC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="5dp"
+        android:text="confirm" />
+    
+    <ProgressBar
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/progress"
+		android:layout_centerInParent="true"
+		android:visibility="gone"
+		/>
+</RelativeLayout>
+

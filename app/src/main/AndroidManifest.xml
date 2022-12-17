@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="kr.ac.inha.android.APP"
+	android:versionCode="145"
+	android:versionName="4.13.8">
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="android.permission.READ_CALENDAR"/>
+	<uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.CAMERA"/>
+	<uses-permission android:name="android.permission.VIBRATE" android:required="false"/>
+	<uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS"/>
+	<queries>
+		<package android:name="kr.co.s1.mobilecardbridge"/>
+		<package android:name="kr.coursemos.android2"/>
+	</queries>
+
+	<!-- NFC 관련 퍼미션 -->
+	<uses-permission android:name="android.permission.NFC" android:required="false"/>
+	<uses-feature android:name="android.hadware.nfc" android:required="false"/>
+	
+	<!-- 스크린 맞추기 -->
+	<supports-screens android:resizeable="true"
+                  android:smallScreens="true"
+                  android:normalScreens="true"
+                  android:largeScreens="true"
+                  android:anyDensity="true"
+                  />
+
+	<application
+		android:allowBackup="false"
+		android:icon="@mipmap/ic_launcher"
+		android:roundIcon="@mipmap/ic_launcher_round"
+		android:label="@string/app_name"
+		android:theme="@style/AppTheme"
+		android:resizeableActivity="true"
+		android:supportsPictureInPicture="true"
+		android:name=".library.AppHelper">
+
+		<activity android:name="MainActivity"
+			android:theme="@android:style/Theme.Light.NoTitleBar"
+			android:screenOrientation="fullSensor"
+			android:exported="true">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".WebViewActivity"
+			android:theme="@style/AppNoFullScreenTheme"
+			android:configChanges="keyboardHidden|orientation|screenSize"/>
+
+		<activity android:name=".ContactsSendActivity"
+			android:theme="@android:style/Theme.NoTitleBar"
+			android:configChanges="keyboardHidden|orientation"/>
+
+		<activity
+			android:name=".QrReader"
+			android:theme="@style/AppTheme" />
+	
+		<activity android:name=".push.showMsg"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@style/Theme.AppCompat.Dialog.Alert"
+            android:launchMode="singleTask"
+			android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.AlertDialogs" />
+            </intent-filter>
+        </activity>
+
+		<activity
+			android:name=".FIDO.Activity.Fingerprint"
+			android:theme="@style/AppTheme" />
+
+		<activity
+			android:name=".FIDO.Activity.PinCode"
+			android:theme="@style/AppTheme" />
+
+		<activity
+			android:name=".FIDO.Activity.Pattern"
+			android:theme="@style/AppTheme" />
+
+		<uses-library android:name="com.google.android.maps" />
+		<uses-library
+			android:name="org.apache.http.legacy"
+			android:required="false" />
+
+		<!-- Firebase Service -->
+		<service
+			android:name=".push.CustomFirebaseMessagingService"
+			android:enabled="true"
+			android:stopWithTask="false"
+			android:exported="false"
+			>
+			<intent-filter>
+				<action android:name="com.google.firebase.MESSAGING_EVENT"/>
+			</intent-filter>
+		</service>
+
+        <provider
+			android:name="androidx.core.content.FileProvider"
+			android:authorities="${applicationId}.provider"
+			android:exported="false"
+			android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/provider_paths"/>
+		</provider>
+		
+	</application>
+</manifest>

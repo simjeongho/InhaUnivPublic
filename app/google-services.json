@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "493037955387",
+    "firebase_url": "https://inhaunivandroidapp.firebaseio.com",
+    "project_id": "inhaunivandroidapp",
+    "storage_bucket": "inhaunivandroidapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:493037955387:android:d534d644b7a9b7da",
+        "android_client_info": {
+          "package_name": "kr.ac.inha.android.APP"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "493037955387-frgje77snrep65b9rof7o55kveucjjtv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.ac.inha.android.APP",
+            "certificate_hash": "c98408da097dde19a1797b524bea2ad58ba4c150"
+          }
+        },
+        {
+          "client_id": "493037955387-e482bgcju5j9o7fcg351vqfh5fpifd6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMyg6cxPooXlHVnw3tyuWv7-fU5wM_khs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "493037955387-e482bgcju5j9o7fcg351vqfh5fpifd6l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

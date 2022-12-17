@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">인하대학교</string>
+    <string name="button">Button</string>
+    <string name="테스트">Name</string>
+    <string name="button_test">버툰</string>
+    <string name="title_test">테스트</string>
+    <string name="fingerprint_description">Confirm fingerprint to continue</string>
+    <string name="fingerprint_hint">Touch sensor</string>
+</resources>

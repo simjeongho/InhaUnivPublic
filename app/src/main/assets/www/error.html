@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<div style="width:90%; margin:0 auto;">
+    <h1 id="error-title" style="text-align:center; font-size:30px; color:#292929; margin-bottom:45px;">Client Error</h1>
+    <p style="font-size:14px; color:#292929; font-weight:bold;text-align:center; margin-bottom:25px;">
+        <font id="error-code" color="#e80000"></font>
+        <span id="error-description"> 오류가 발생했습니다.</span>
+    </p>
+    <ul style="margin:25px auto; width:75%; color:#47597f; font-size:14px; background-color:#e5eaf5; padding:15px 25px; line-height:150%; list-style:none; border:1px solid #cfd8ec;">
+        <li>
+            <span id="error-guide"></span>
+            <span id="error-solution">다시 시도해보시고 그래도 오류가 발생할 경우에는 아래 주소로 메일을 보내주세요.</span>
+        </li>
+    </ul>
+    <p style="background-color:#2357ac; padding:10px; margin:0 auto; width:200px; text-align:center;">
+        <a id="on-error-action" style="font-size:13px; color:#FFF; text-decoration:none;" href="mailto:0001085@inha.ac.kr">오류 신고하기</a>
+    </p>
+</div>
+</body>
+
+<script>
+  var urlParams = new URLSearchParams(window.location.search);
+
+  var errorCode = urlParams.get('errorCode');
+  var errorDescription = urlParams.get('errorDescription');
+
+  switch (errorCode) {
+    case '-2':
+      document.getElementById("error-title").innerText = '사용자 기기 오류';
+      document.getElementById("error-code").innerHTML = '네트워크에 연결되지 않았습니다. ';
+      document.getElementById("error-description").innerText = '';
+      document.getElementById('error-guide').innerHTML = 'Wi-Fi 및 데이터 통신을 확인해주세요. ';
+      document.getElementById('error-solution').innerHTML = '네트워크 연결 후에 아래 버튼을 눌러주세요.';
+      document.getElementById('on-error-action').innerText = '다시 시도하기';
+      document.getElementById('on-error-action').href = 'javascript:history.back()';
+      break;
+    default:
+      document.getElementById("error-code").innerHTML = errorDescription;
+  }
+</script>
+
+</html>

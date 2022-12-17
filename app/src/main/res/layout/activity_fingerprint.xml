@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="kr.ac.inha.android.APP.FIDO.Activity.Fingerprint">
+
+    <RelativeLayout android:id="@+id/rlTitleArea"
+        android:background="#eeeeee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true">
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="112dp"
+            android:gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="360px"
+                android:layout_height="360px"
+                app:srcCompat="@drawable/fingerprint_default" />
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39px"
+                android:text="지문인증"
+                android:textColor="#000000"
+                android:textSize="30px" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="24dp"
+                android:layout_marginTop="168px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvMessage1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="[지문등록]"
+                    android:textAlignment="textEnd"
+                    android:textColor="#F07589"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:id="@+id/tvMessage2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:text="을 눌러 지문을 다시 인증해주세요."
+                    android:textAlignment="viewStart"
+                    android:textColor="#000000"
+                    android:textSize="30px" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/fingerPrintAuthBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="45px"
+            android:layout_marginLeft="45px"
+            android:layout_marginRight="45px"
+            android:background="@color/colorStatusBar"
+            android:text="지문인증"
+            android:textColor="#ffffff"
+            android:textSize="48px" />
+
+    </RelativeLayout>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        />
+</RelativeLayout>
